@@ -30,7 +30,10 @@ class Rectangulo {
         this.ancho = ancho;
     }
     calcularArea(){
-        return this.alto * this.ancho
+        return this.alto * this.ancho  
+        //respuesta de David
+        //var area = this.alto * this.ancho
+        //return `El áreas del rectangulo es: ${area}`
     }
 }
 const miRectangulo = new Rectangulo(10,5)
