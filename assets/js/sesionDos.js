@@ -24,10 +24,39 @@
 
 // // Se espera: "El área del rectángulo es: 50"
 
+class Rectangulo {
+    constructor(alto, ancho) {
+        this.alto = alto;
+        this.ancho = ancho;
+    }
+    calcularArea(){
+        return this.alto * this.ancho
+    }
+}
+const miRectangulo = new Rectangulo(10,5)
+
+console.log("El área del rectángulo es: " + miRectangulo.calcularArea() )
+
 //------------------------------------
 
-// // Ejercicio 3: Clase "Persona" con método que salude
-// // Consigna: Crea una clase llamada Persona con las propiedades nombre y edad. Incluye un método llamado saludar que retorne un mensaje como "Hola, mi nombre es [nombre] y tengo [edad] años". Crea al menos dos instancias de la clase y haz que cada una salude mostrando el resultado en la consola.
+// Ejercicio 3: Clase "Persona" con método que salude
+// Consigna: Crea una clase llamada Persona con las propiedades nombre y edad. Incluye un método llamado saludar que retorne un mensaje como "Hola, mi nombre es [nombre] y tengo [edad] años". Crea al menos dos instancias de la clase y haz que cada una salude mostrando el resultado en la consola.
 
 // // Se espera: Hola, mi nombre es Emiliano y tengo 31 años.
 // // Se espera: Hola, mi nombre es Carlos y tengo 30 años.
+
+class Persona {
+    constructor(nombre, edad){
+        this.nombre = nombre
+        this.edad = edad
+    }
+    saludar(){
+        return `Hola, mi nombre es ${this.nombre} y tengo ${this.edad} años`;
+    }
+}
+
+const personaUno = new Persona("Emiliano", 31)
+const personaDos = new Persona("Carlos", 30)
+
+console.log(personaUno.saludar())
+console.log(personaDos.saludar())
