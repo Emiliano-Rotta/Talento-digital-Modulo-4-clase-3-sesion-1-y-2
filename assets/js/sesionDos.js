@@ -127,3 +127,54 @@ console.log(genUno.next().value)
  // Consigna: Tienes un array de colores: ['rojo', 'azul', 'verde', 'amarillo', 'morado']. Crea una función generadora llamada generadorColoresInverso que devuelva los colores en orden inverso (de morado a rojo) utilizando yield. Después de haber devuelto todos los colores, la función debe terminar con el mensaje "Se acabaron los colores". Usa i-- para recorrer el array de atrás hacia adelante.
 
 // let colores = ['rojo', 'azul', 'verde', 'amarillo', 'morado'];
+
+//orden comun
+// function* generadorColores(){
+//     let i = 0
+//     yield colores[i]
+//     i++
+//     yield colores[i]
+//     i++
+//     yield colores[i]
+//     i++
+//     yield colores[i]
+//     i++
+//     yield colores[i]
+//     i++
+//     return "Se acabaron los colores"
+// }
+
+// const iteradorColores = generadorColores()
+// console.log(iteradorColores.next().value)
+// console.log(iteradorColores.next().value)
+// console.log(iteradorColores.next().value)
+// console.log(iteradorColores.next().value)
+// console.log(iteradorColores.next().value)
+// console.log(iteradorColores.next().value)
+
+
+//orden inverso
+let colores = ['rojo', 'azul', 'verde', 'amarillo', 'morado'];
+function* generadorColoresInverso(){
+    let i = colores.length -1
+    yield colores[i]
+    i--
+    yield colores[i]
+    i--
+    yield colores[i]
+    i--
+    yield colores[i]
+    i--
+    yield colores[i]
+    i--
+    return "Se acabaron los colores"
+}
+
+const iteradorColoresInverso = generadorColoresInverso()
+console.log(iteradorColoresInverso.next().value)
+console.log(iteradorColoresInverso.next().value)
+console.log(iteradorColoresInverso.next().value)
+console.log(iteradorColoresInverso.next().value)
+console.log(iteradorColoresInverso.next().value)
+console.log(iteradorColoresInverso.next().value)
+
